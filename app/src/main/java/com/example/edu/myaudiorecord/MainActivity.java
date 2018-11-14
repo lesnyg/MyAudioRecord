@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         stop.setEnabled(false);
         play.setEnabled(false);
-        outputFile = Environment.getExternalStorageDirectory().getAbsolutePath()+"/recording.3gp";
+        outputFile = getExternalFilesDir(null).getAbsolutePath()+"/recording.3gp";
         myAudioRecoder = new MediaRecorder();
         myAudioRecoder.setAudioSource(MediaRecorder.AudioSource.MIC);
         myAudioRecoder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
